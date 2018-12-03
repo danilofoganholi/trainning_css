@@ -1,0 +1,514 @@
+﻿body{
+    /* tamanho e fonte */    
+    font: 14px Verdana;
+    background-color: #ccf3ff;
+    margin: 0px;
+    padding:0;
+}
+/*
+p {
+     espaçamento das linhas 
+    line-height: 1.4 em;
+}
+*/
+
+h1 {
+    /* cor da fonte */
+    color : #E54D26;
+    text-align: center;
+}
+
+h2+span{
+    /* negrito */
+    font-weight: bold;
+    /* espaço entre as letras */
+    /*letter-spacing: 0.3em;*/
+}
+
+.span2 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+}
+
+.span1 {
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    font-size: 52px;
+    font-weight: bold;
+    color: #E54D26;
+}
+li a {
+    /* retira a decoração do texto */
+    tex-decoration:none;
+    color: black;
+}
+
+/* link já visitado */
+li a:visited{
+    color : white;
+}
+
+/* mouse por cima */
+li a:hover {
+    color : white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+} 
+
+nav {
+    /* alinhamento  */
+    text-align: center;
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    /* border */
+   /* border: 1px solid #000; */
+}
+
+li a{
+    display: block;
+    color: white;
+    cursor: pointer; 
+}
+
+/* caminho da seleção */
+nav ul li {
+    /* enfileirar */
+    display: inline-block;
+    /* margin */
+    padding-left : 8px;
+    /* só letras maiusculas */
+    text-transform: uppercase;
+    /* largura */
+    width: 190px;
+    background-color: darkblue;
+    color: white;
+    margin: 8px 10px 0 0px;
+    padding: 10px;
+    /*aredondamento do botao*/
+    border-radius: 10px; 
+    /* borda do botao*/
+    border-bottom: 5px blue solid ;
+    /* ficar com indicardo de botao */
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    margin: 9px 10px 0 0  ;
+    border-bottom: 4px blue solid ;
+    padding-bottom : 9px;
+    /*sombra= esquerda - baixo - esfumaçado - cor */
+    text-shadow: 0px 0px 5px white;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+a:visited {
+    color: white;
+}
+
+header {
+    height: 100px;
+    background-color: cornflowerblue; 
+    position: relative;
+}
+
+header img {
+    width: 100px;
+    cursor : pointer;
+}
+
+footer {
+    padding: 5px;
+    background-color: black;
+}
+footer p{
+    color : white;
+    text-align: center;
+}
+
+section {
+    width: 93%;
+    /* top|bottom -- right|left*/
+    margin: 0 auto;
+}
+
+article {
+    /* solid - dashed - dotted - double*/
+    border-bottom: 1px dashed;
+}
+
+h2{
+    border-bottom: 3px solid black;
+    width: 420px;
+    box-shadow: 4px 4 px 0 black;
+    border-radius: 20px 20px  20px 20px;
+    text-align: center;
+}
+
+/* acrescentar texto antes de tags 
+h2:before{
+    content: "->";
+    font: 28px Georgia;
+}*/
+
+#html { 
+    width: 200px;
+}
+
+.tamanho {
+    width: 300px;
+}
+
+.html5 {
+    width: 250px;
+}
+
+.efeito {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+
+    /*opacidade*/
+    opacity: 0.5;
+    filter:invert(100%);
+    transition: all 0.6s;
+}
+
+.efeito:hover {
+    width: 350px;
+    opacity: 1;
+    cursor: pointer;
+    filter:invert(0);
+}
+
+.pag {
+    border-bottom: 3px blue solid ;
+    background-color: blue;
+    color: white;
+}
+
+/*animação*/
+@keyframes nave {
+    0%{ 
+        left:-250px;
+        transform: scale(2) rotate(45deg);
+    }
+    50%{
+        left: 100%;
+        transform: rotate(45deg) scale(0.4);
+    }
+    51%{
+        transform: rotate(-135deg) scale(0.4);
+    }
+    100%{
+        left:-250px;
+        transform:scale(2) rotate(-135deg);
+    }
+}
+
+@keyframes div {
+    0% {
+        background-color: white;
+    }
+    25% {
+        background-color: blue;
+        background-image: url(../imagens/stars.png);
+    }
+    50%{
+        background-color: black;
+        background-image: url(../imagens/stars.png);
+    }
+    75%{
+        background-color: blue
+    }
+    100%{
+        background-color: white;
+        
+
+    }
+}
+
+.anima {
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    border: 1px solid black;
+    position: relative;
+    /*limitação do espaço*/
+    overflow: hidden;
+    background-color: white;
+    animation: div 3s infinite linear;
+    background-size: 50%;
+    margin: 20px auto;
+}
+
+.anima img{
+    animation: nave 3s infinite linear;
+    width: 120px;
+    position:absolute;
+    left:-150px;
+    top:50px;
+    transform: scale(1.5) rotate(45deg);      
+}
+
+.box {
+    margin: 10px 0;
+}
+.div1{
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    height: 300px;
+}
+
+.bgfoto {
+    width: 40%;
+    height: 300px;
+    background-image: url(../imagens/img_padaria/cafeteria.jpg);
+    background-size: 100%;
+    background-position: 0 -52px;
+}
+
+div aside{ 
+    width: 22%;
+    height: 300px;
+    background-image: url(../imagens/gifs/aside.gif);
+    background-size: cover;
+}
+
+.p1 {
+    width: 34%;
+    margin: 0 2%;
+}
+
+.box .bgfoto, div aside, .box p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.p2 {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    bottom: 100px;
+}
+
+.box-sub {
+    width: 37%;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box-sub img {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.box-sub button {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
+    margin-left: 50px;
+    cursor: pointer;
+    border: black;
+    background: orange;
+    padding: 5px 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.box-sub button:hover {
+    transition: 0.5s;
+    background: white;
+    border: orange;
+    color: orange;
+    padding: 10px 0 ;
+    
+}
+
+/* responsividade mobile*/
+@media only screen and (max-width:650px) {
+
+body {
+    margin: 0 auto;
+}
+nav ul li {
+    text-align: center;
+    border-radius: 0;
+    display: block;
+    width: 80%;
+    margin: 0;
+}
+ul {
+    margin: 10px 60px;
+}
+.menu {
+    width: 15%;
+    position: relative;
+    top: -80px;
+    right: -320px;
+}
+nav{
+    display: none;
+}
+.span1, .span2{
+    display: none;
+}
+h2{
+    width: 100%;
+}
+.box .bgfoto, div aside, .box p, .p2, .box-sub, .box-sub img, .box-sub button , .p1 {
+    display: block;
+    width:100%
+}
+div aside{ 
+    height: 400px;
+    margin: 20px 0px;
+    background-color: black;
+    background-image: url(../imagens/gifs/aside.gif);
+    background-size: cover;
+}
+.bgfoto {
+    width: 40%;
+    height: 200px;
+    margin: 20px 0px;
+    background-image: url(../imagens/img_padaria/cafeteria.jpg);
+    background-size: 100%;
+    background-position: 0 -52px;
+}
+.box-sub button {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -50px;
+    margin-left: 150px;
+    cursor: pointer;
+    border: black;
+    background: orange;
+    padding: 5px 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+}
+.box-sub img {
+    width: 20%;
+    display: block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.p2 {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    bottom: -20px;
+}
+}
+
+/* responsividade desktop */
+@media only screen and (min-width:1024px) {
+
+.menu {
+    display: none;
+}
+}
+
+/* responsividade tablet */
+@media only screen and (min-width:655px) and (max-width:1024px) {
+body{
+    background-color: springgreen;
+}
+nav {
+    display: none;
+}
+.menu {
+    width: 8%;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}    
+.span2 {
+    position: relative;
+    right: 20px;
+    }
+.span1{
+        display: none;
+    }
+.bgfoto {
+    width: 40%;
+    height: 180px;
+    background-image: url(../imagens/img_padaria/cafeteria.jpg);
+    background-size: 100%;
+    background-position: 0;
+    
+}
+    .p1 {
+        width: 56%;
+    }
+    div aside {
+        display: inline-block;
+        margin: 20px 10px;
+        width: 40%;
+    }
+    .p2 {
+        width: 100%;
+        display:inline-block;
+        position: absolute;
+        bottom: auto;
+        margin: auto;
+    }
+    .div1{
+        display: inline-block;
+        margin: 20px 10px;
+        width: 50%;
+        vertical-align: top;
+    }
+    .box-sub {
+        width: 55%;
+        height: 150px;
+        position: relative;
+    }
+    .box-sub img, .box-sub button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .box-sub img:first-child {
+        top: -110px;
+        right: -30px;
+    }
+    .box-sub img:nth-of-type(2) {
+        top: 20px;
+        right: -30px;
+}
+    .box-sub button:nth-of-type(1){
+        top: -110px;
+        right: -250px;
+    }
+     .box-sub button:nth-of-type(2){
+        top: 20px;
+        right: -250px;
+    }
+}
+
+
+
+
+
+
